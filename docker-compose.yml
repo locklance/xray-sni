@@ -12,7 +12,7 @@ services:
       - .env
     network_mode: host
     ports:
-      ${SNI_PORT}:${SNI_PORT}
+      - ${SNI_PORT}:${SNI_PORT}
     restart: 
       unless-stopped
 
