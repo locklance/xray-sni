@@ -13,7 +13,7 @@
 }
 
 http://{$SNI_DOMAIN} {
-    # bind 0.0.0.0
+    bind 0.0.0.0
     redir https://{$SNI_DOMAIN}{uri} permanent
 }
 
