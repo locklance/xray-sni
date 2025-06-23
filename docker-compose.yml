@@ -10,9 +10,7 @@ services:
       - caddy_config:/config
     env_file:
       - .env
-    ports:
-      - ${SNI_PORT}:${SNI_PORT}
-      - 80:80
+    network_mode: host
     restart: 
       unless-stopped
 
