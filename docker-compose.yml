@@ -6,6 +6,7 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - ./html:/var/www/html
       - ./logs:/var/log/caddy
+      - ./certs:/etc/caddy/certs
       - caddy_data:/data
       - caddy_config:/config
     env_file:

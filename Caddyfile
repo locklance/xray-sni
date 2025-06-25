@@ -18,10 +18,10 @@ http://{$SNI_DOMAIN} {
 }
 
 https://{$SNI_DOMAIN} {
+    tls /etc/caddy/certs/public.pem /etc/caddy/certs/privkey.pem
     root * /var/www/html
     try_files {path} /index.html
     file_server
-
 }
 
 :{$SNI_PORT} {
