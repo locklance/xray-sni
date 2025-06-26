@@ -18,7 +18,9 @@ http://{$SNI_DOMAIN} {
 }
 
 https://{$SNI_DOMAIN} {
-    tls /etc/caddy/certs/public.pem /etc/caddy/certs/privkey.pem
+    tls {
+	    dns cloudflare {$CF_API_TOKEN}
+    }
     root * /var/www/html
     try_files {path} /index.html
     file_server

@@ -1,12 +1,13 @@
 services:
   caddy:
-    image: caddy:2.10
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: snisite
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - ./html:/var/www/html
       - ./logs:/var/log/caddy
-      - ./certs:/etc/caddy/certs
       - caddy_data:/data
       - caddy_config:/config
     env_file:

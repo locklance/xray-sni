@@ -4,8 +4,8 @@
 ├── Caddyfile
 ├── README.md
 ├── certs
-│   ├── privkey.pem <---- PRIVATE KEY HERE 
-│   └── public.pem  <---- PUBLIC KEY HERE
+│   ├── CF_privkey.pem <---- PRIVATE KEY HERE 
+│   └── CF_public.pem  <---- PUBLIC KEY HERE
 ├── docker-compose.yml
 ├── html
 │   └── index.html
