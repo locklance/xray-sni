@@ -24,6 +24,9 @@ https://{$SNI_DOMAIN} {
     root * /var/www/html
     try_files {path} /index.html
     file_server
+
+    @health path /health
+    respond @health 200
 }
 
 :{$SNI_PORT} {
